@@ -1,0 +1,185 @@
+<UserControl x:Class="QuanAn.QuanLyNhaHangEntitiesView"
+xmlns="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+xmlns:viewmodel="clr-namespace:QuanAn"
+
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="800" DataContext="{dxmvvm:ViewModelSource viewmodel:QuanLyNhaHangEntitiesViewModel}">
+    <dxmvvm:Interaction.Behaviors>
+        <dxmvvm:EventToCommand Command="{Binding ShowDocumentCommand}" CommandParameter="BanAnCollectionView;Ban Ans"/>
+        <dx:DXMessageBoxService></dx:DXMessageBoxService>
+    </dxmvvm:Interaction.Behaviors>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <dxb:BarManager>
+            <DockPanel>
+                <dxr:RibbonControl RibbonStyle="Office2010" DockPanel.Dock="Top" ToolbarShowMode="Hide" ShowApplicationButton="False">
+                    <dxr:RibbonControl.PageHeaderItems>
+                        <dxb:BarButtonItem Content="About" Glyph="{dx:DXImage Image=AlignHorizontalBottom_32x32.png}" LargeGlyph="{dx:DXImage Image=AlignHorizontalBottom_32x32.png}" Command="{Binding ShowAboutCommand}"/>
+                    </dxr:RibbonControl.PageHeaderItems>
+                    <dxr:RibbonDefaultPageCategory Caption="defaultCategory">
+                        <dxr:RibbonPage Caption="Home"/>
+                        <dxr:RibbonPage Caption="View">
+                            <dxr:RibbonPageGroup Caption="Appearance">
+                                <dxr:RibbonGalleryBarItem>
+                                    <dxmvvm:Interaction.Behaviors>
+                                        <dxr:RibbonGalleryItemThemeSelectorBehavior/>
+                                    </dxmvvm:Interaction.Behaviors>
+                                </dxr:RibbonGalleryBarItem>
+                            </dxr:RibbonPageGroup>
+                        </dxr:RibbonPage>
+                    </dxr:RibbonDefaultPageCategory>
+                </dxr:RibbonControl>
+                <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom"/>
+                <Grid Background="Transparent">
+                    <dxdo:DockLayoutManager>
+                        <dxdo:LayoutGroup Caption="LayoutRoot">
+                            <dxdo:LayoutPanel Caption="Navigation" ItemWidth="0.5*" MaxWidth="300">
+                                <dxn:NavBarControl AllowSelectItem="False">
+                                    <dxn:NavBarControl.View>
+                                        <dxn:NavigationPaneView IsExpandButtonVisible="False"/>
+                                    </dxn:NavBarControl.View>
+                                    <dxn:NavBarControl.Groups>
+                                        <dxn:NavBarGroup Header="Tables">
+                                            <dxn:NavBarItem Content="Ban Ans" Command="{Binding ShowDocumentCommand}" CommandParameter="BanAnCollectionView;Ban Ans"/>
+                                            <dxn:NavBarItem Content="Ban An Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="BanAnChiTietCollectionView;Ban An Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Bang Luongs" Command="{Binding ShowDocumentCommand}" CommandParameter="BangLuongCollectionView;Bang Luongs"/>
+                                            <dxn:NavBarItem Content="Ca Lam Viecs" Command="{Binding ShowDocumentCommand}" CommandParameter="CaLamViecCollectionView;Ca Lam Viecs"/>
+                                            <dxn:NavBarItem Content="Cham Congs" Command="{Binding ShowDocumentCommand}" CommandParameter="ChamCongCollectionView;Cham Congs"/>
+                                            <dxn:NavBarItem Content="Chi Tiet Kho Mat Hangs" Command="{Binding ShowDocumentCommand}" CommandParameter="ChiTietKhoMatHangCollectionView;Chi Tiet Kho Mat Hangs"/>
+                                            <dxn:NavBarItem Content="Chung Tus" Command="{Binding ShowDocumentCommand}" CommandParameter="ChungTuCollectionView;Chung Tus"/>
+                                            <dxn:NavBarItem Content="CRM Nguon Khach" Command="{Binding ShowDocumentCommand}" CommandParameter="CRM_NguonKhachCollectionView;CRM Nguon Khach"/>
+                                            <dxn:NavBarItem Content="Danh Sach Chis" Command="{Binding ShowDocumentCommand}" CommandParameter="DanhSachChiCollectionView;Danh Sach Chis"/>
+                                            <dxn:NavBarItem Content="Danh Sach Thus" Command="{Binding ShowDocumentCommand}" CommandParameter="DanhSachThuCollectionView;Danh Sach Thus"/>
+                                            <dxn:NavBarItem Content="Dat Ban Menu Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="DatBanMenuChiTietCollectionView;Dat Ban Menu Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Doi Tacs" Command="{Binding ShowDocumentCommand}" CommandParameter="DoiTacCollectionView;Doi Tacs"/>
+                                            <dxn:NavBarItem Content="Don Vi Tinhs" Command="{Binding ShowDocumentCommand}" CommandParameter="DonViTinhCollectionView;Don Vi Tinhs"/>
+                                            <dxn:NavBarItem Content="Dot Kiem Kes" Command="{Binding ShowDocumentCommand}" CommandParameter="DotKiemKeCollectionView;Dot Kiem Kes"/>
+                                            <dxn:NavBarItem Content="dtproperties" Command="{Binding ShowDocumentCommand}" CommandParameter="dtpropertyCollectionView;dtproperties"/>
+                                            <dxn:NavBarItem Content="Giao CAs" Command="{Binding ShowDocumentCommand}" CommandParameter="GiaoCACollectionView;Giao CAs"/>
+                                            <dxn:NavBarItem Content="Hang De Khuyen Mais" Command="{Binding ShowDocumentCommand}" CommandParameter="HangDeKhuyenMaiCollectionView;Hang De Khuyen Mais"/>
+                                            <dxn:NavBarItem Content="Hang De Tra Lais" Command="{Binding ShowDocumentCommand}" CommandParameter="HangDeTraLaiCollectionView;Hang De Tra Lais"/>
+                                            <dxn:NavBarItem Content="Hoa Don Bans" Command="{Binding ShowDocumentCommand}" CommandParameter="HoaDonBanCollectionView;Hoa Don Bans"/>
+                                            <dxn:NavBarItem Content="Hoa Don Ban Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="HoaDonBanChiTietCollectionView;Hoa Don Ban Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Hoa Don VATs" Command="{Binding ShowDocumentCommand}" CommandParameter="HoaDonVATCollectionView;Hoa Don VATs"/>
+                                            <dxn:NavBarItem Content="Hoa Hongs" Command="{Binding ShowDocumentCommand}" CommandParameter="HoaHongCollectionView;Hoa Hongs"/>
+                                            <dxn:NavBarItem Content="K The Kho" Command="{Binding ShowDocumentCommand}" CommandParameter="K_TheKhoCollectionView;K The Kho"/>
+                                            <dxn:NavBarItem Content="Khoes" Command="{Binding ShowDocumentCommand}" CommandParameter="KhoCollectionView;Khoes"/>
+                                            <dxn:NavBarItem Content="Kho Khu Vucs" Command="{Binding ShowDocumentCommand}" CommandParameter="KhoKhuVucCollectionView;Kho Khu Vucs"/>
+                                            <dxn:NavBarItem Content="Khu Vuc Bans" Command="{Binding ShowDocumentCommand}" CommandParameter="KhuVucBanCollectionView;Khu Vuc Bans"/>
+                                            <dxn:NavBarItem Content="Khuyen Mais" Command="{Binding ShowDocumentCommand}" CommandParameter="KhuyenMaiCollectionView;Khuyen Mais"/>
+                                            <dxn:NavBarItem Content="Kiem Ke Kho Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="KiemKeKhoChiTietCollectionView;Kiem Ke Kho Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Kieu Doi Tacs" Command="{Binding ShowDocumentCommand}" CommandParameter="KieuDoiTacCollectionView;Kieu Doi Tacs"/>
+                                            <dxn:NavBarItem Content="Loai Nhom Mat Hangs" Command="{Binding ShowDocumentCommand}" CommandParameter="LoaiNhomMatHangCollectionView;Loai Nhom Mat Hangs"/>
+                                            <dxn:NavBarItem Content="Loai Nhom Mat Hang Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="LoaiNhomMatHangChiTietCollectionView;Loai Nhom Mat Hang Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Loai Tai Sans" Command="{Binding ShowDocumentCommand}" CommandParameter="LoaiTaiSanCollectionView;Loai Tai Sans"/>
+                                            <dxn:NavBarItem Content="Loai The VIPs" Command="{Binding ShowDocumentCommand}" CommandParameter="LoaiTheVIPCollectionView;Loai The VIPs"/>
+                                            <dxn:NavBarItem Content="LOGs" Command="{Binding ShowDocumentCommand}" CommandParameter="LOGCollectionView;LOGs"/>
+                                            <dxn:NavBarItem Content="Mat Hangs" Command="{Binding ShowDocumentCommand}" CommandParameter="MatHangCollectionView;Mat Hangs"/>
+                                            <dxn:NavBarItem Content="Nguoi Dai Diens" Command="{Binding ShowDocumentCommand}" CommandParameter="NguoiDaiDienCollectionView;Nguoi Dai Diens"/>
+                                            <dxn:NavBarItem Content="Nhan Viens" Command="{Binding ShowDocumentCommand}" CommandParameter="NhanVienCollectionView;Nhan Viens"/>
+                                            <dxn:NavBarItem Content="Nhom Cas" Command="{Binding ShowDocumentCommand}" CommandParameter="NhomCaCollectionView;Nhom Cas"/>
+                                            <dxn:NavBarItem Content="Nhom Mat Hangs" Command="{Binding ShowDocumentCommand}" CommandParameter="NhomMatHangCollectionView;Nhom Mat Hangs"/>
+                                            <dxn:NavBarItem Content="Nhom Thu Chis" Command="{Binding ShowDocumentCommand}" CommandParameter="NhomThuChiCollectionView;Nhom Thu Chis"/>
+                                            <dxn:NavBarItem Content="Pha Ches" Command="{Binding ShowDocumentCommand}" CommandParameter="PhaCheCollectionView;Pha Ches"/>
+                                            <dxn:NavBarItem Content="Phieu Chis" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuChiCollectionView;Phieu Chis"/>
+                                            <dxn:NavBarItem Content="Phieu Chuyen Khoes" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuChuyenKhoCollectionView;Phieu Chuyen Khoes"/>
+                                            <dxn:NavBarItem Content="Phieu Dat Bans" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuDatBanCollectionView;Phieu Dat Bans"/>
+                                            <dxn:NavBarItem Content="Phieu Dat Ban Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuDatBanChiTietCollectionView;Phieu Dat Ban Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Phieu Nhaps" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuNhapCollectionView;Phieu Nhaps"/>
+                                            <dxn:NavBarItem Content="Phieu Nhap Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuNhapChiTietCollectionView;Phieu Nhap Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Phieu Thus" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuThuCollectionView;Phieu Thus"/>
+                                            <dxn:NavBarItem Content="Phieu Xuats" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuXuatCollectionView;Phieu Xuats"/>
+                                            <dxn:NavBarItem Content="Phieu Xuat Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="PhieuXuatChiTietCollectionView;Phieu Xuat Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Phong Bans" Command="{Binding ShowDocumentCommand}" CommandParameter="PhongBanCollectionView;Phong Bans"/>
+                                            <dxn:NavBarItem Content="Phu Cap Luongs" Command="{Binding ShowDocumentCommand}" CommandParameter="PhuCapLuongCollectionView;Phu Cap Luongs"/>
+                                            <dxn:NavBarItem Content="Phuong Thuc Thanh Toans" Command="{Binding ShowDocumentCommand}" CommandParameter="PhuongThucThanhToanCollectionView;Phuong Thuc Thanh Toans"/>
+                                            <dxn:NavBarItem Content="Qui Doi Don Vi Tinhs" Command="{Binding ShowDocumentCommand}" CommandParameter="QuiDoiDonViTinhCollectionView;Qui Doi Don Vi Tinhs"/>
+                                            <dxn:NavBarItem Content="Quyens" Command="{Binding ShowDocumentCommand}" CommandParameter="QuyenCollectionView;Quyens"/>
+                                            <dxn:NavBarItem Content="SRM Dich Vu Khach Hang" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_DichVuKhachHangCollectionView;SRM Dich Vu Khach Hang"/>
+                                            <dxn:NavBarItem Content="SRM Giam Tai San" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_GiamTaiSanCollectionView;SRM Giam Tai San"/>
+                                            <dxn:NavBarItem Content="SRM Gia Nha CC" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_GiaNhaCCCollectionView;SRM Gia Nha CC"/>
+                                            <dxn:NavBarItem Content="SRM Hoa Don Ban Chi Tiet Log" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_HoaDonBanChiTietLogCollectionView;SRM Hoa Don Ban Chi Tiet Log"/>
+                                            <dxn:NavBarItem Content="SRM Khach Tra No Hoa Don" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_KhachTraNoHoaDonCollectionView;SRM Khach Tra No Hoa Don"/>
+                                            <dxn:NavBarItem Content="SRM Khau Hao Tai San" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_KhauHaoTaiSanCollectionView;SRM Khau Hao Tai San"/>
+                                            <dxn:NavBarItem Content="SRM Khau Hao Tai San Chi Tiet" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_KhauHaoTaiSanChiTietCollectionView;SRM Khau Hao Tai San Chi Tiet"/>
+                                            <dxn:NavBarItem Content="SRM Khuyen Mai Hoa Don" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_KhuyenMaiHoaDonCollectionView;SRM Khuyen Mai Hoa Don"/>
+                                            <dxn:NavBarItem Content="SRM Nhom Tai San" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_NhomTaiSanCollectionView;SRM Nhom Tai San"/>
+                                            <dxn:NavBarItem Content="SRM Phieu Thu Chi" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_PhieuThuChiCollectionView;SRM Phieu Thu Chi"/>
+                                            <dxn:NavBarItem Content="SRM Tai San" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_TaiSanCollectionView;SRM Tai San"/>
+                                            <dxn:NavBarItem Content="SRM Tang Tai San" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_TangTaiSanCollectionView;SRM Tang Tai San"/>
+                                            <dxn:NavBarItem Content="SRM Tinh Trang Doi Tac" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_TinhTrangDoiTacCollectionView;SRM Tinh Trang Doi Tac"/>
+                                            <dxn:NavBarItem Content="SRM Tinh Trang Hang Hoa" Command="{Binding ShowDocumentCommand}" CommandParameter="SRM_TinhTrangHangHoaCollectionView;SRM Tinh Trang Hang Hoa"/>
+                                            <dxn:NavBarItem Content="The Khoes" Command="{Binding ShowDocumentCommand}" CommandParameter="TheKhoCollectionView;The Khoes"/>
+                                            <dxn:NavBarItem Content="The VIPs" Command="{Binding ShowDocumentCommand}" CommandParameter="TheVIPCollectionView;The VIPs"/>
+                                            <dxn:NavBarItem Content="The VIP Chi Tiets" Command="{Binding ShowDocumentCommand}" CommandParameter="TheVIPChiTietCollectionView;The VIP Chi Tiets"/>
+                                            <dxn:NavBarItem Content="Thong Tin NHs" Command="{Binding ShowDocumentCommand}" CommandParameter="ThongTinNHCollectionView;Thong Tin NHs"/>
+                                            <dxn:NavBarItem Content="Tien Tes" Command="{Binding ShowDocumentCommand}" CommandParameter="TienTeCollectionView;Tien Tes"/>
+                                        </dxn:NavBarGroup>
+                                        <dxn:NavBarGroup Header="Views">
+                                            <dxn:NavBarItem Content="Ban An Phieu DB" Command="{Binding ShowDocumentCommand}" CommandParameter="BanAn_PhieuDBCollectionView;Ban An Phieu DB"/>
+                                            <dxn:NavBarItem Content="BANAN PHIEUDB " Command="{Binding ShowDocumentCommand}" CommandParameter="BANAN_PHIEUDB_CollectionView;BANAN PHIEUDB "/>
+                                            <dxn:NavBarItem Content="c1 28" Command="{Binding ShowDocumentCommand}" CommandParameter="c1_28CollectionView;c1 28"/>
+                                            <dxn:NavBarItem Content="c1 Hoa Don CT" Command="{Binding ShowDocumentCommand}" CommandParameter="c1_HoaDonCTCollectionView;c1 Hoa Don CT"/>
+                                            <dxn:NavBarItem Content="c2 Hang TL not In" Command="{Binding ShowDocumentCommand}" CommandParameter="c2_HangTL_notInCollectionView;c2 Hang TL not In"/>
+                                            <dxn:NavBarItem Content="c2 HDCT Hang TL" Command="{Binding ShowDocumentCommand}" CommandParameter="c2_HDCT_HangTLCollectionView;c2 HDCT Hang TL"/>
+                                            <dxn:NavBarItem Content="c CN1" Command="{Binding ShowDocumentCommand}" CommandParameter="cCN1CollectionView;c CN1"/>
+                                            <dxn:NavBarItem Content="c CN2" Command="{Binding ShowDocumentCommand}" CommandParameter="cCN2CollectionView;c CN2"/>
+                                            <dxn:NavBarItem Content="c DTKVs" Command="{Binding ShowDocumentCommand}" CommandParameter="cDTKVCollectionView;c DTKVs"/>
+                                            <dxn:NavBarItem Content="CV1" Command="{Binding ShowDocumentCommand}" CommandParameter="CV1CollectionView;CV1"/>
+                                            <dxn:NavBarItem Content="ketquakd 1" Command="{Binding ShowDocumentCommand}" CommandParameter="ketquakd_1CollectionView;ketquakd 1"/>
+                                            <dxn:NavBarItem Content="kqkd 1Test" Command="{Binding ShowDocumentCommand}" CommandParameter="kqkd_1TestCollectionView;kqkd 1Test"/>
+                                            <dxn:NavBarItem Content="kqkd 2" Command="{Binding ShowDocumentCommand}" CommandParameter="kqkd_2CollectionView;kqkd 2"/>
+                                            <dxn:NavBarItem Content="kqkd 3" Command="{Binding ShowDocumentCommand}" CommandParameter="kqkd_3CollectionView;kqkd 3"/>
+                                            <dxn:NavBarItem Content="kvs" Command="{Binding ShowDocumentCommand}" CommandParameter="kvCollectionView;kvs"/>
+                                            <dxn:NavBarItem Content="Nhap Hangs" Command="{Binding ShowDocumentCommand}" CommandParameter="Nhap_HangCollectionView;Nhap Hangs"/>
+                                            <dxn:NavBarItem Content="Nhap TK" Command="{Binding ShowDocumentCommand}" CommandParameter="Nhap_TKCollectionView;Nhap TK"/>
+                                            <dxn:NavBarItem Content="tb Chi Tiet Chi" Command="{Binding ShowDocumentCommand}" CommandParameter="tb_ChiTietChiCollectionView;tb Chi Tiet Chi"/>
+                                            <dxn:NavBarItem Content="test v20" Command="{Binding ShowDocumentCommand}" CommandParameter="test_v20CollectionView;test v20"/>
+                                            <dxn:NavBarItem Content="test V20 1" Command="{Binding ShowDocumentCommand}" CommandParameter="test_V20_1CollectionView;test V20 1"/>
+                                            <dxn:NavBarItem Content="thang v1" Command="{Binding ShowDocumentCommand}" CommandParameter="thang_v1CollectionView;thang v1"/>
+                                            <dxn:NavBarItem Content="Tong Chi 1" Command="{Binding ShowDocumentCommand}" CommandParameter="TongChi_1CollectionView;Tong Chi 1"/>
+                                            <dxn:NavBarItem Content="Tong Chi 2" Command="{Binding ShowDocumentCommand}" CommandParameter="TongChi_2CollectionView;Tong Chi 2"/>
+                                            <dxn:NavBarItem Content="Tong Gia Tri Phieu Xuat" Command="{Binding ShowDocumentCommand}" CommandParameter="TongGiaTri_PhieuXuatCollectionView;Tong Gia Tri Phieu Xuat"/>
+                                            <dxn:NavBarItem Content="Tong Hang Nhaps" Command="{Binding ShowDocumentCommand}" CommandParameter="TongHangNhapCollectionView;Tong Hang Nhaps"/>
+                                            <dxn:NavBarItem Content="Tong Hang Xuats" Command="{Binding ShowDocumentCommand}" CommandParameter="TongHangXuatCollectionView;Tong Hang Xuats"/>
+                                            <dxn:NavBarItem Content="View 1" Command="{Binding ShowDocumentCommand}" CommandParameter="View_1CollectionView;View 1"/>
+                                            <dxn:NavBarItem Content="View 2" Command="{Binding ShowDocumentCommand}" CommandParameter="View_2CollectionView;View 2"/>
+                                            <dxn:NavBarItem Content="View 4" Command="{Binding ShowDocumentCommand}" CommandParameter="View_4CollectionView;View 4"/>
+                                            <dxn:NavBarItem Content="View 5" Command="{Binding ShowDocumentCommand}" CommandParameter="View_5CollectionView;View 5"/>
+                                            <dxn:NavBarItem Content="View 6" Command="{Binding ShowDocumentCommand}" CommandParameter="View_6CollectionView;View 6"/>
+                                            <dxn:NavBarItem Content="View by GD" Command="{Binding ShowDocumentCommand}" CommandParameter="View_byGDCollectionView;View by GD"/>
+                                            <dxn:NavBarItem Content="view doanhthutheogd" Command="{Binding ShowDocumentCommand}" CommandParameter="view_doanhthutheogdCollectionView;view doanhthutheogd"/>
+                                            <dxn:NavBarItem Content="View lydo Chi" Command="{Binding ShowDocumentCommand}" CommandParameter="View_lydoChiCollectionView;View lydo Chi"/>
+                                            <dxn:NavBarItem Content="View Mains" Command="{Binding ShowDocumentCommand}" CommandParameter="ViewMainCollectionView;View Mains"/>
+                                            <dxn:NavBarItem Content="Xuat Hangs" Command="{Binding ShowDocumentCommand}" CommandParameter="Xuat_HangCollectionView;Xuat Hangs"/>
+                                            <dxn:NavBarItem Content="Xuat TK" Command="{Binding ShowDocumentCommand}" CommandParameter="Xuat_TKCollectionView;Xuat TK"/>
+                                        </dxn:NavBarGroup>
+                                    </dxn:NavBarControl.Groups>
+                                </dxn:NavBarControl>
+                            </dxdo:LayoutPanel>
+                            <dxdo:DocumentGroup x:Name="documentGroup">
+                                <dxmvvm:Interaction.Behaviors>
+                                    <dxdo:TabbedDocumentUIService/>
+                                </dxmvvm:Interaction.Behaviors>
+                            </dxdo:DocumentGroup>
+                        </dxdo:LayoutGroup>
+                    </dxdo:DockLayoutManager>
+                </Grid>
+            </DockPanel>
+        </dxb:BarManager>
+    </Grid>
+</UserControl>

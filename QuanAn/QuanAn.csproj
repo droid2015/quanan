@@ -1,0 +1,2021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{144670CB-6396-488C-A76D-2E03A3B69E78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanAn</RootNamespace>
+    <AssemblyName>QuanAn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Images.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Controls.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v14.1" />
+    <Reference Include="DevExpress.Data.v14.1" />
+    <Reference Include="DevExpress.Xpf.Docking.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Layout.v14.1.Core, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.LayoutControl.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.NavBar.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Printing.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Ribbon.v14.1, Version=14.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\CommonResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataModel\DbExceptions.cs" />
+    <Compile Include="Common\DataModel\DesignTimeReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\DesignTimeRepository.cs" />
+    <Compile Include="Common\DataModel\DesignTimeUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbExceptionsConverter.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbRepository.cs" />
+    <Compile Include="Common\DataModel\EntityFramework\DbUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\EntityMessage.cs" />
+    <Compile Include="Common\DataModel\IReadOnlyRepository.cs" />
+    <Compile Include="Common\DataModel\IRepository.cs" />
+    <Compile Include="Common\DataModel\IUnitOfWork.cs" />
+    <Compile Include="Common\DataModel\UnitOfWorkBase.cs" />
+    <Compile Include="Common\Utils\DbExtensions.cs" />
+    <Compile Include="Common\Utils\ExpressionHelper.cs" />
+    <Compile Include="Common\ViewModel\CollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\EntityInitializers.cs" />
+    <Compile Include="Common\ViewModel\ISingleObjectViewModel.cs" />
+    <Compile Include="Common\ViewModel\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="Common\ViewModel\SingleObjectViewModel.cs" />
+    <Compile Include="QuanLyNhaHangEntitiesDataModel\DesignTimeQuanLyNhaHangEntitiesUnitOfWork.cs" />
+    <Compile Include="QuanLyNhaHangEntitiesDataModel\IQuanLyNhaHangEntitiesUnitOfWork.cs" />
+    <Compile Include="QuanLyNhaHangEntitiesDataModel\QuanLyNhaHangEntitiesUnitOfWork.cs" />
+    <Compile Include="QuanLyNhaHangEntitiesDataModel\UnitOfWorkSource.cs" />
+    <Compile Include="QuanLyNhaHangEntitiesView.xaml.cs">
+      <DependentUpon>QuanLyNhaHangEntitiesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhaHangEntitiesViewModel.cs" />
+    <Compile Include="ViewModels\BanAnChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\BanAnChiTietViewModel.cs" />
+    <Compile Include="ViewModels\BanAnCollectionViewModel.cs" />
+    <Compile Include="ViewModels\BanAnViewModel.cs" />
+    <Compile Include="ViewModels\BanAn_PhieuDBCollectionViewModel.cs" />
+    <Compile Include="ViewModels\BANAN_PHIEUDB_CollectionViewModel.cs" />
+    <Compile Include="ViewModels\BangLuongCollectionViewModel.cs" />
+    <Compile Include="ViewModels\BangLuongViewModel.cs" />
+    <Compile Include="ViewModels\c1_28CollectionViewModel.cs" />
+    <Compile Include="ViewModels\c1_HoaDonCTCollectionViewModel.cs" />
+    <Compile Include="ViewModels\c2_HangTL_notInCollectionViewModel.cs" />
+    <Compile Include="ViewModels\c2_HDCT_HangTLCollectionViewModel.cs" />
+    <Compile Include="ViewModels\CaLamViecCollectionViewModel.cs" />
+    <Compile Include="ViewModels\CaLamViecViewModel.cs" />
+    <Compile Include="ViewModels\cCN1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\cCN2CollectionViewModel.cs" />
+    <Compile Include="ViewModels\cDTKVCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ChamCongCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ChamCongViewModel.cs" />
+    <Compile Include="ViewModels\ChiTietKhoMatHangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ChiTietKhoMatHangViewModel.cs" />
+    <Compile Include="ViewModels\ChungTuCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ChungTuViewModel.cs" />
+    <Compile Include="ViewModels\CRM_NguonKhachCollectionViewModel.cs" />
+    <Compile Include="ViewModels\CRM_NguonKhachViewModel.cs" />
+    <Compile Include="ViewModels\CV1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\DanhSachChiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\DanhSachChiViewModel.cs" />
+    <Compile Include="ViewModels\DanhSachThuCollectionViewModel.cs" />
+    <Compile Include="ViewModels\DanhSachThuViewModel.cs" />
+    <Compile Include="ViewModels\DatBanMenuChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\DatBanMenuChiTietViewModel.cs" />
+    <Compile Include="ViewModels\DoiTacCollectionViewModel.cs" />
+    <Compile Include="ViewModels\DoiTacViewModel.cs" />
+    <Compile Include="ViewModels\DonViTinhCollectionViewModel.cs" />
+    <Compile Include="ViewModels\DonViTinhViewModel.cs" />
+    <Compile Include="ViewModels\DotKiemKeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\DotKiemKeViewModel.cs" />
+    <Compile Include="ViewModels\dtpropertyCollectionViewModel.cs" />
+    <Compile Include="ViewModels\GiaoCACollectionViewModel.cs" />
+    <Compile Include="ViewModels\GiaoCAViewModel.cs" />
+    <Compile Include="ViewModels\HangDeKhuyenMaiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\HangDeKhuyenMaiViewModel.cs" />
+    <Compile Include="ViewModels\HangDeTraLaiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\HangDeTraLaiViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonBanChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonBanChiTietViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonBanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonBanViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonVATCollectionViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonVATViewModel.cs" />
+    <Compile Include="ViewModels\HoaHongCollectionViewModel.cs" />
+    <Compile Include="ViewModels\HoaHongViewModel.cs" />
+    <Compile Include="ViewModels\ketquakd_1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\KhoCollectionViewModel.cs" />
+    <Compile Include="ViewModels\KhoKhuVucCollectionViewModel.cs" />
+    <Compile Include="ViewModels\KhoKhuVucViewModel.cs" />
+    <Compile Include="ViewModels\KhoViewModel.cs" />
+    <Compile Include="ViewModels\KhuVucBanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\KhuVucBanViewModel.cs" />
+    <Compile Include="ViewModels\KhuyenMaiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\KhuyenMaiViewModel.cs" />
+    <Compile Include="ViewModels\KiemKeKhoChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\KiemKeKhoChiTietViewModel.cs" />
+    <Compile Include="ViewModels\KieuDoiTacCollectionViewModel.cs" />
+    <Compile Include="ViewModels\KieuDoiTacViewModel.cs" />
+    <Compile Include="ViewModels\kqkd_1TestCollectionViewModel.cs" />
+    <Compile Include="ViewModels\kqkd_2CollectionViewModel.cs" />
+    <Compile Include="ViewModels\kqkd_3CollectionViewModel.cs" />
+    <Compile Include="ViewModels\kvCollectionViewModel.cs" />
+    <Compile Include="ViewModels\K_TheKhoCollectionViewModel.cs" />
+    <Compile Include="ViewModels\K_TheKhoViewModel.cs" />
+    <Compile Include="ViewModels\LoaiNhomMatHangChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\LoaiNhomMatHangChiTietViewModel.cs" />
+    <Compile Include="ViewModels\LoaiNhomMatHangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\LoaiNhomMatHangViewModel.cs" />
+    <Compile Include="ViewModels\LoaiTaiSanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\LoaiTaiSanViewModel.cs" />
+    <Compile Include="ViewModels\LoaiTheVIPCollectionViewModel.cs" />
+    <Compile Include="ViewModels\LoaiTheVIPViewModel.cs" />
+    <Compile Include="ViewModels\LOGCollectionViewModel.cs" />
+    <Compile Include="ViewModels\LOGViewModel.cs" />
+    <Compile Include="ViewModels\MatHangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\MatHangViewModel.cs" />
+    <Compile Include="ViewModels\NguoiDaiDienCollectionViewModel.cs" />
+    <Compile Include="ViewModels\NguoiDaiDienViewModel.cs" />
+    <Compile Include="ViewModels\NhanVienCollectionViewModel.cs" />
+    <Compile Include="ViewModels\NhanVienViewModel.cs" />
+    <Compile Include="ViewModels\Nhap_HangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Nhap_TKCollectionViewModel.cs" />
+    <Compile Include="ViewModels\NhomCaCollectionViewModel.cs" />
+    <Compile Include="ViewModels\NhomCaViewModel.cs" />
+    <Compile Include="ViewModels\NhomMatHangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\NhomMatHangViewModel.cs" />
+    <Compile Include="ViewModels\NhomThuChiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\NhomThuChiViewModel.cs" />
+    <Compile Include="ViewModels\PhaCheCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhaCheViewModel.cs" />
+    <Compile Include="ViewModels\PhieuChiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuChiViewModel.cs" />
+    <Compile Include="ViewModels\PhieuChuyenKhoCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuChuyenKhoViewModel.cs" />
+    <Compile Include="ViewModels\PhieuDatBanChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuDatBanChiTietViewModel.cs" />
+    <Compile Include="ViewModels\PhieuDatBanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuDatBanViewModel.cs" />
+    <Compile Include="ViewModels\PhieuNhapChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuNhapChiTietViewModel.cs" />
+    <Compile Include="ViewModels\PhieuNhapCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuNhapViewModel.cs" />
+    <Compile Include="ViewModels\PhieuThuCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuThuViewModel.cs" />
+    <Compile Include="ViewModels\PhieuXuatChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuXuatChiTietViewModel.cs" />
+    <Compile Include="ViewModels\PhieuXuatCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhieuXuatViewModel.cs" />
+    <Compile Include="ViewModels\PhongBanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhongBanViewModel.cs" />
+    <Compile Include="ViewModels\PhuCapLuongCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhuCapLuongViewModel.cs" />
+    <Compile Include="ViewModels\PhuongThucThanhToanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PhuongThucThanhToanViewModel.cs" />
+    <Compile Include="ViewModels\QuiDoiDonViTinhCollectionViewModel.cs" />
+    <Compile Include="ViewModels\QuiDoiDonViTinhViewModel.cs" />
+    <Compile Include="ViewModels\QuyenCollectionViewModel.cs" />
+    <Compile Include="ViewModels\QuyenViewModel.cs" />
+    <Compile Include="ViewModels\SRM_DichVuKhachHangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_DichVuKhachHangViewModel.cs" />
+    <Compile Include="ViewModels\SRM_GiamTaiSanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_GiamTaiSanViewModel.cs" />
+    <Compile Include="ViewModels\SRM_GiaNhaCCCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_GiaNhaCCViewModel.cs" />
+    <Compile Include="ViewModels\SRM_HoaDonBanChiTietLogCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_HoaDonBanChiTietLogViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhachTraNoHoaDonCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhachTraNoHoaDonViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhauHaoTaiSanChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhauHaoTaiSanChiTietViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhauHaoTaiSanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhauHaoTaiSanViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhuyenMaiHoaDonCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_KhuyenMaiHoaDonViewModel.cs" />
+    <Compile Include="ViewModels\SRM_NhomTaiSanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_NhomTaiSanViewModel.cs" />
+    <Compile Include="ViewModels\SRM_PhieuThuChiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_PhieuThuChiViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TaiSanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TaiSanViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TangTaiSanCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TangTaiSanViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TinhTrangDoiTacCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TinhTrangDoiTacViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TinhTrangHangHoaCollectionViewModel.cs" />
+    <Compile Include="ViewModels\SRM_TinhTrangHangHoaViewModel.cs" />
+    <Compile Include="ViewModels\tb_ChiTietChiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\test_v20CollectionViewModel.cs" />
+    <Compile Include="ViewModels\test_V20_1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\thang_v1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\TheKhoCollectionViewModel.cs" />
+    <Compile Include="ViewModels\TheKhoViewModel.cs" />
+    <Compile Include="ViewModels\TheVIPChiTietCollectionViewModel.cs" />
+    <Compile Include="ViewModels\TheVIPChiTietViewModel.cs" />
+    <Compile Include="ViewModels\TheVIPCollectionViewModel.cs" />
+    <Compile Include="ViewModels\TheVIPViewModel.cs" />
+    <Compile Include="ViewModels\ThongTinNHCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ThongTinNHViewModel.cs" />
+    <Compile Include="ViewModels\TienTeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\TienTeViewModel.cs" />
+    <Compile Include="ViewModels\TongChi_1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\TongChi_2CollectionViewModel.cs" />
+    <Compile Include="ViewModels\TongGiaTri_PhieuXuatCollectionViewModel.cs" />
+    <Compile Include="ViewModels\TongHangNhapCollectionViewModel.cs" />
+    <Compile Include="ViewModels\TongHangXuatCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ViewMainCollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_1CollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_2CollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_4CollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_5CollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_6CollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_byGDCollectionViewModel.cs" />
+    <Compile Include="ViewModels\view_doanhthutheogdCollectionViewModel.cs" />
+    <Compile Include="ViewModels\View_lydoChiCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Xuat_HangCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Xuat_TKCollectionViewModel.cs" />
+    <Compile Include="Views\BanAnChiTietCollectionView.xaml.cs">
+      <DependentUpon>BanAnChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanAnChiTietView.xaml.cs">
+      <DependentUpon>BanAnChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanAnCollectionView.xaml.cs">
+      <DependentUpon>BanAnCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanAnView.xaml.cs">
+      <DependentUpon>BanAnView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BanAn_PhieuDBCollectionView.xaml.cs">
+      <DependentUpon>BanAn_PhieuDBCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BANAN_PHIEUDB_CollectionView.xaml.cs">
+      <DependentUpon>BANAN_PHIEUDB_CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BangLuongCollectionView.xaml.cs">
+      <DependentUpon>BangLuongCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BangLuongView.xaml.cs">
+      <DependentUpon>BangLuongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\c1_28CollectionView.xaml.cs">
+      <DependentUpon>c1_28CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\c1_HoaDonCTCollectionView.xaml.cs">
+      <DependentUpon>c1_HoaDonCTCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\c2_HangTL_notInCollectionView.xaml.cs">
+      <DependentUpon>c2_HangTL_notInCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\c2_HDCT_HangTLCollectionView.xaml.cs">
+      <DependentUpon>c2_HDCT_HangTLCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CaLamViecCollectionView.xaml.cs">
+      <DependentUpon>CaLamViecCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CaLamViecView.xaml.cs">
+      <DependentUpon>CaLamViecView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cCN1CollectionView.xaml.cs">
+      <DependentUpon>cCN1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cCN2CollectionView.xaml.cs">
+      <DependentUpon>cCN2CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\cDTKVCollectionView.xaml.cs">
+      <DependentUpon>cDTKVCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChamCongCollectionView.xaml.cs">
+      <DependentUpon>ChamCongCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChamCongView.xaml.cs">
+      <DependentUpon>ChamCongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChiTietKhoMatHangCollectionView.xaml.cs">
+      <DependentUpon>ChiTietKhoMatHangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChiTietKhoMatHangView.xaml.cs">
+      <DependentUpon>ChiTietKhoMatHangView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChungTuCollectionView.xaml.cs">
+      <DependentUpon>ChungTuCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChungTuView.xaml.cs">
+      <DependentUpon>ChungTuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CRM_NguonKhachCollectionView.xaml.cs">
+      <DependentUpon>CRM_NguonKhachCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CRM_NguonKhachView.xaml.cs">
+      <DependentUpon>CRM_NguonKhachView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CV1CollectionView.xaml.cs">
+      <DependentUpon>CV1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhSachChiCollectionView.xaml.cs">
+      <DependentUpon>DanhSachChiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhSachChiView.xaml.cs">
+      <DependentUpon>DanhSachChiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhSachThuCollectionView.xaml.cs">
+      <DependentUpon>DanhSachThuCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhSachThuView.xaml.cs">
+      <DependentUpon>DanhSachThuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DatBanMenuChiTietCollectionView.xaml.cs">
+      <DependentUpon>DatBanMenuChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DatBanMenuChiTietView.xaml.cs">
+      <DependentUpon>DatBanMenuChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoiTacCollectionView.xaml.cs">
+      <DependentUpon>DoiTacCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoiTacView.xaml.cs">
+      <DependentUpon>DoiTacView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DonViTinhCollectionView.xaml.cs">
+      <DependentUpon>DonViTinhCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DonViTinhView.xaml.cs">
+      <DependentUpon>DonViTinhView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DotKiemKeCollectionView.xaml.cs">
+      <DependentUpon>DotKiemKeCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DotKiemKeView.xaml.cs">
+      <DependentUpon>DotKiemKeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\dtpropertyCollectionView.xaml.cs">
+      <DependentUpon>dtpropertyCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GiaoCACollectionView.xaml.cs">
+      <DependentUpon>GiaoCACollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GiaoCAView.xaml.cs">
+      <DependentUpon>GiaoCAView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HangDeKhuyenMaiCollectionView.xaml.cs">
+      <DependentUpon>HangDeKhuyenMaiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HangDeKhuyenMaiView.xaml.cs">
+      <DependentUpon>HangDeKhuyenMaiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HangDeTraLaiCollectionView.xaml.cs">
+      <DependentUpon>HangDeTraLaiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HangDeTraLaiView.xaml.cs">
+      <DependentUpon>HangDeTraLaiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaDonBanChiTietCollectionView.xaml.cs">
+      <DependentUpon>HoaDonBanChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaDonBanChiTietView.xaml.cs">
+      <DependentUpon>HoaDonBanChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaDonBanCollectionView.xaml.cs">
+      <DependentUpon>HoaDonBanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaDonBanView.xaml.cs">
+      <DependentUpon>HoaDonBanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaDonVATCollectionView.xaml.cs">
+      <DependentUpon>HoaDonVATCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaDonVATView.xaml.cs">
+      <DependentUpon>HoaDonVATView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaHongCollectionView.xaml.cs">
+      <DependentUpon>HoaHongCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HoaHongView.xaml.cs">
+      <DependentUpon>HoaHongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ketquakd_1CollectionView.xaml.cs">
+      <DependentUpon>ketquakd_1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhoCollectionView.xaml.cs">
+      <DependentUpon>KhoCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhoKhuVucCollectionView.xaml.cs">
+      <DependentUpon>KhoKhuVucCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhoKhuVucView.xaml.cs">
+      <DependentUpon>KhoKhuVucView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhoView.xaml.cs">
+      <DependentUpon>KhoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhuVucBanCollectionView.xaml.cs">
+      <DependentUpon>KhuVucBanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhuVucBanView.xaml.cs">
+      <DependentUpon>KhuVucBanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhuyenMaiCollectionView.xaml.cs">
+      <DependentUpon>KhuyenMaiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KhuyenMaiView.xaml.cs">
+      <DependentUpon>KhuyenMaiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KiemKeKhoChiTietCollectionView.xaml.cs">
+      <DependentUpon>KiemKeKhoChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KiemKeKhoChiTietView.xaml.cs">
+      <DependentUpon>KiemKeKhoChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KieuDoiTacCollectionView.xaml.cs">
+      <DependentUpon>KieuDoiTacCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KieuDoiTacView.xaml.cs">
+      <DependentUpon>KieuDoiTacView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\kqkd_1TestCollectionView.xaml.cs">
+      <DependentUpon>kqkd_1TestCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\kqkd_2CollectionView.xaml.cs">
+      <DependentUpon>kqkd_2CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\kqkd_3CollectionView.xaml.cs">
+      <DependentUpon>kqkd_3CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\kvCollectionView.xaml.cs">
+      <DependentUpon>kvCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\K_TheKhoCollectionView.xaml.cs">
+      <DependentUpon>K_TheKhoCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\K_TheKhoView.xaml.cs">
+      <DependentUpon>K_TheKhoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiNhomMatHangChiTietCollectionView.xaml.cs">
+      <DependentUpon>LoaiNhomMatHangChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiNhomMatHangChiTietView.xaml.cs">
+      <DependentUpon>LoaiNhomMatHangChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiNhomMatHangCollectionView.xaml.cs">
+      <DependentUpon>LoaiNhomMatHangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiNhomMatHangView.xaml.cs">
+      <DependentUpon>LoaiNhomMatHangView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiTaiSanCollectionView.xaml.cs">
+      <DependentUpon>LoaiTaiSanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiTaiSanView.xaml.cs">
+      <DependentUpon>LoaiTaiSanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiTheVIPCollectionView.xaml.cs">
+      <DependentUpon>LoaiTheVIPCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoaiTheVIPView.xaml.cs">
+      <DependentUpon>LoaiTheVIPView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LOGCollectionView.xaml.cs">
+      <DependentUpon>LOGCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LOGView.xaml.cs">
+      <DependentUpon>LOGView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatHangCollectionView.xaml.cs">
+      <DependentUpon>MatHangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatHangView.xaml.cs">
+      <DependentUpon>MatHangView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NguoiDaiDienCollectionView.xaml.cs">
+      <DependentUpon>NguoiDaiDienCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NguoiDaiDienView.xaml.cs">
+      <DependentUpon>NguoiDaiDienView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhanVienCollectionView.xaml.cs">
+      <DependentUpon>NhanVienCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhanVienView.xaml.cs">
+      <DependentUpon>NhanVienView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nhap_HangCollectionView.xaml.cs">
+      <DependentUpon>Nhap_HangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Nhap_TKCollectionView.xaml.cs">
+      <DependentUpon>Nhap_TKCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhomCaCollectionView.xaml.cs">
+      <DependentUpon>NhomCaCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhomCaView.xaml.cs">
+      <DependentUpon>NhomCaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhomMatHangCollectionView.xaml.cs">
+      <DependentUpon>NhomMatHangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhomMatHangView.xaml.cs">
+      <DependentUpon>NhomMatHangView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhomThuChiCollectionView.xaml.cs">
+      <DependentUpon>NhomThuChiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NhomThuChiView.xaml.cs">
+      <DependentUpon>NhomThuChiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhaCheCollectionView.xaml.cs">
+      <DependentUpon>PhaCheCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhaCheView.xaml.cs">
+      <DependentUpon>PhaCheView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuChiCollectionView.xaml.cs">
+      <DependentUpon>PhieuChiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuChiView.xaml.cs">
+      <DependentUpon>PhieuChiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuChuyenKhoCollectionView.xaml.cs">
+      <DependentUpon>PhieuChuyenKhoCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuChuyenKhoView.xaml.cs">
+      <DependentUpon>PhieuChuyenKhoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuDatBanChiTietCollectionView.xaml.cs">
+      <DependentUpon>PhieuDatBanChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuDatBanChiTietView.xaml.cs">
+      <DependentUpon>PhieuDatBanChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuDatBanCollectionView.xaml.cs">
+      <DependentUpon>PhieuDatBanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuDatBanView.xaml.cs">
+      <DependentUpon>PhieuDatBanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuNhapChiTietCollectionView.xaml.cs">
+      <DependentUpon>PhieuNhapChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuNhapChiTietView.xaml.cs">
+      <DependentUpon>PhieuNhapChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuNhapCollectionView.xaml.cs">
+      <DependentUpon>PhieuNhapCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuNhapView.xaml.cs">
+      <DependentUpon>PhieuNhapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuThuCollectionView.xaml.cs">
+      <DependentUpon>PhieuThuCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuThuView.xaml.cs">
+      <DependentUpon>PhieuThuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuXuatChiTietCollectionView.xaml.cs">
+      <DependentUpon>PhieuXuatChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuXuatChiTietView.xaml.cs">
+      <DependentUpon>PhieuXuatChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuXuatCollectionView.xaml.cs">
+      <DependentUpon>PhieuXuatCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuXuatView.xaml.cs">
+      <DependentUpon>PhieuXuatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhongBanCollectionView.xaml.cs">
+      <DependentUpon>PhongBanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhongBanView.xaml.cs">
+      <DependentUpon>PhongBanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhuCapLuongCollectionView.xaml.cs">
+      <DependentUpon>PhuCapLuongCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhuCapLuongView.xaml.cs">
+      <DependentUpon>PhuCapLuongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhuongThucThanhToanCollectionView.xaml.cs">
+      <DependentUpon>PhuongThucThanhToanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhuongThucThanhToanView.xaml.cs">
+      <DependentUpon>PhuongThucThanhToanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuiDoiDonViTinhCollectionView.xaml.cs">
+      <DependentUpon>QuiDoiDonViTinhCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuiDoiDonViTinhView.xaml.cs">
+      <DependentUpon>QuiDoiDonViTinhView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuyenCollectionView.xaml.cs">
+      <DependentUpon>QuyenCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\QuyenView.xaml.cs">
+      <DependentUpon>QuyenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_DichVuKhachHangCollectionView.xaml.cs">
+      <DependentUpon>SRM_DichVuKhachHangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_DichVuKhachHangView.xaml.cs">
+      <DependentUpon>SRM_DichVuKhachHangView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_GiamTaiSanCollectionView.xaml.cs">
+      <DependentUpon>SRM_GiamTaiSanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_GiamTaiSanView.xaml.cs">
+      <DependentUpon>SRM_GiamTaiSanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_GiaNhaCCCollectionView.xaml.cs">
+      <DependentUpon>SRM_GiaNhaCCCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_GiaNhaCCView.xaml.cs">
+      <DependentUpon>SRM_GiaNhaCCView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_HoaDonBanChiTietLogCollectionView.xaml.cs">
+      <DependentUpon>SRM_HoaDonBanChiTietLogCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_HoaDonBanChiTietLogView.xaml.cs">
+      <DependentUpon>SRM_HoaDonBanChiTietLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhachTraNoHoaDonCollectionView.xaml.cs">
+      <DependentUpon>SRM_KhachTraNoHoaDonCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhachTraNoHoaDonView.xaml.cs">
+      <DependentUpon>SRM_KhachTraNoHoaDonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhauHaoTaiSanChiTietCollectionView.xaml.cs">
+      <DependentUpon>SRM_KhauHaoTaiSanChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhauHaoTaiSanChiTietView.xaml.cs">
+      <DependentUpon>SRM_KhauHaoTaiSanChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhauHaoTaiSanCollectionView.xaml.cs">
+      <DependentUpon>SRM_KhauHaoTaiSanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhauHaoTaiSanView.xaml.cs">
+      <DependentUpon>SRM_KhauHaoTaiSanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhuyenMaiHoaDonCollectionView.xaml.cs">
+      <DependentUpon>SRM_KhuyenMaiHoaDonCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_KhuyenMaiHoaDonView.xaml.cs">
+      <DependentUpon>SRM_KhuyenMaiHoaDonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_NhomTaiSanCollectionView.xaml.cs">
+      <DependentUpon>SRM_NhomTaiSanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_NhomTaiSanView.xaml.cs">
+      <DependentUpon>SRM_NhomTaiSanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_PhieuThuChiCollectionView.xaml.cs">
+      <DependentUpon>SRM_PhieuThuChiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_PhieuThuChiView.xaml.cs">
+      <DependentUpon>SRM_PhieuThuChiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TaiSanCollectionView.xaml.cs">
+      <DependentUpon>SRM_TaiSanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TaiSanView.xaml.cs">
+      <DependentUpon>SRM_TaiSanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TangTaiSanCollectionView.xaml.cs">
+      <DependentUpon>SRM_TangTaiSanCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TangTaiSanView.xaml.cs">
+      <DependentUpon>SRM_TangTaiSanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TinhTrangDoiTacCollectionView.xaml.cs">
+      <DependentUpon>SRM_TinhTrangDoiTacCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TinhTrangDoiTacView.xaml.cs">
+      <DependentUpon>SRM_TinhTrangDoiTacView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TinhTrangHangHoaCollectionView.xaml.cs">
+      <DependentUpon>SRM_TinhTrangHangHoaCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SRM_TinhTrangHangHoaView.xaml.cs">
+      <DependentUpon>SRM_TinhTrangHangHoaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\tb_ChiTietChiCollectionView.xaml.cs">
+      <DependentUpon>tb_ChiTietChiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\test_v20CollectionView.xaml.cs">
+      <DependentUpon>test_v20CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\test_V20_1CollectionView.xaml.cs">
+      <DependentUpon>test_V20_1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\thang_v1CollectionView.xaml.cs">
+      <DependentUpon>thang_v1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheKhoCollectionView.xaml.cs">
+      <DependentUpon>TheKhoCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheKhoView.xaml.cs">
+      <DependentUpon>TheKhoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheVIPChiTietCollectionView.xaml.cs">
+      <DependentUpon>TheVIPChiTietCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheVIPChiTietView.xaml.cs">
+      <DependentUpon>TheVIPChiTietView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheVIPCollectionView.xaml.cs">
+      <DependentUpon>TheVIPCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TheVIPView.xaml.cs">
+      <DependentUpon>TheVIPView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongTinNHCollectionView.xaml.cs">
+      <DependentUpon>ThongTinNHCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongTinNHView.xaml.cs">
+      <DependentUpon>ThongTinNHView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TienTeCollectionView.xaml.cs">
+      <DependentUpon>TienTeCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TienTeView.xaml.cs">
+      <DependentUpon>TienTeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TongChi_1CollectionView.xaml.cs">
+      <DependentUpon>TongChi_1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TongChi_2CollectionView.xaml.cs">
+      <DependentUpon>TongChi_2CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TongGiaTri_PhieuXuatCollectionView.xaml.cs">
+      <DependentUpon>TongGiaTri_PhieuXuatCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TongHangNhapCollectionView.xaml.cs">
+      <DependentUpon>TongHangNhapCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TongHangXuatCollectionView.xaml.cs">
+      <DependentUpon>TongHangXuatCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewMainCollectionView.xaml.cs">
+      <DependentUpon>ViewMainCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_1CollectionView.xaml.cs">
+      <DependentUpon>View_1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_2CollectionView.xaml.cs">
+      <DependentUpon>View_2CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_4CollectionView.xaml.cs">
+      <DependentUpon>View_4CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_5CollectionView.xaml.cs">
+      <DependentUpon>View_5CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_6CollectionView.xaml.cs">
+      <DependentUpon>View_6CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_byGDCollectionView.xaml.cs">
+      <DependentUpon>View_byGDCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\view_doanhthutheogdCollectionView.xaml.cs">
+      <DependentUpon>view_doanhthutheogdCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View_lydoChiCollectionView.xaml.cs">
+      <DependentUpon>View_lydoChiCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Xuat_HangCollectionView.xaml.cs">
+      <DependentUpon>Xuat_HangCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Xuat_TKCollectionView.xaml.cs">
+      <DependentUpon>Xuat_TKCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\BanAn.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BanAnChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BanAn_PhieuDB.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BANAN_PHIEUDB_.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BangLuong.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\c1_28.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\c1_HoaDonCT.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\c2_HangTL_notIn.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\c2_HDCT_HangTL.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CaLamViec.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\cCN1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\cCN2.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\cDTKV.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ChamCong.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ChiTietKhoMatHang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ChungTu.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CRM_NguonKhach.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CV1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DanhSachChi.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DanhSachThu.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DatBanMenuChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DoiTac.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DonViTinh.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DotKiemKe.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\dtproperty.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GiaoCA.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HangDeKhuyenMai.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HangDeTraLai.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoaDonBan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoaDonBanChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoaDonVAT.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HoaHong.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ketquakd_1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Kho.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KhoKhuVuc.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KhuVucBan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KhuyenMai.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KiemKeKhoChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\KieuDoiTac.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\kqkd_1Test.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\kqkd_2.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\kqkd_3.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\kv.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\K_TheKho.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoaiNhomMatHang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoaiNhomMatHangChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoaiTaiSan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LoaiTheVIP.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\LOG.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatHang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NguoiDaiDien.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NhanVien.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Nhap_Hang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Nhap_TK.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NhomCa.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NhomMatHang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NhomThuChi.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhaChe.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuChi.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuChuyenKho.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuDatBan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuDatBanChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuNhap.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuNhapChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuThu.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuXuat.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhieuXuatChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhongBan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhuCapLuong.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhuongThucThanhToan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuanAnModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanAnModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuanAnModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuanAnModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanAnModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuiDoiDonViTinh.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Quyen.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_DichVuKhachHang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_GiamTaiSan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_GiaNhaCC.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_HoaDonBanChiTietLog.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_KhachTraNoHoaDon.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_KhauHaoTaiSan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_KhauHaoTaiSanChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_KhuyenMaiHoaDon.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_NhomTaiSan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_PhieuThuChi.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_TaiSan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_TangTaiSan.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_TinhTrangDoiTac.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SRM_TinhTrangHangHoa.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tb_ChiTietChi.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\test_v20.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\test_V20_1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\thang_v1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TheKho.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TheVIP.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TheVIPChiTiet.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ThongTinNH.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TienTe.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TongChi_1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TongChi_2.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TongGiaTri_PhieuXuat.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TongHangNhap.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TongHangXuat.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ViewMain.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_1.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_2.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_4.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_5.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_6.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_byGD.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\view_doanhthutheogd.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\View_lydoChi.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Xuat_Hang.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Xuat_TK.cs">
+      <DependentUpon>QuanAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="QuanLyNhaHangEntitiesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BanAnChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BanAnChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BanAnCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BanAnView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BanAn_PhieuDBCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BANAN_PHIEUDB_CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BangLuongCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BangLuongView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\c1_28CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\c1_HoaDonCTCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\c2_HangTL_notInCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\c2_HDCT_HangTLCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CaLamViecCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CaLamViecView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\cCN1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\cCN2CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\cDTKVCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChamCongCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChamCongView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChiTietKhoMatHangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChiTietKhoMatHangView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChungTuCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ChungTuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CRM_NguonKhachCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CRM_NguonKhachView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CV1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DanhSachChiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DanhSachChiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DanhSachThuCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DanhSachThuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DatBanMenuChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DatBanMenuChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DoiTacCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DoiTacView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DonViTinhCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DonViTinhView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DotKiemKeCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DotKiemKeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\dtpropertyCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GiaoCACollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GiaoCAView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HangDeKhuyenMaiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HangDeKhuyenMaiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HangDeTraLaiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HangDeTraLaiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaDonBanChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaDonBanChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaDonBanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaDonBanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaDonVATCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaDonVATView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaHongCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HoaHongView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ketquakd_1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhoCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhoKhuVucCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhoKhuVucView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhuVucBanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhuVucBanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhuyenMaiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KhuyenMaiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KiemKeKhoChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KiemKeKhoChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KieuDoiTacCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KieuDoiTacView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\kqkd_1TestCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\kqkd_2CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\kqkd_3CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\kvCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\K_TheKhoCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\K_TheKhoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiNhomMatHangChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiNhomMatHangChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiNhomMatHangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiNhomMatHangView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiTaiSanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiTaiSanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiTheVIPCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoaiTheVIPView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LOGCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LOGView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MatHangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MatHangView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NguoiDaiDienCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NguoiDaiDienView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhanVienCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhanVienView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Nhap_HangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Nhap_TKCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhomCaCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhomCaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhomMatHangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhomMatHangView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhomThuChiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NhomThuChiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhaCheCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhaCheView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuChiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuChiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuChuyenKhoCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuChuyenKhoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuDatBanChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuDatBanChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuDatBanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuDatBanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuNhapChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuNhapChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuNhapCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuNhapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuThuCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuThuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuXuatChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuXuatChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuXuatCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhieuXuatView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhongBanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhongBanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhuCapLuongCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhuCapLuongView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhuongThucThanhToanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PhuongThucThanhToanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\QuiDoiDonViTinhCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\QuiDoiDonViTinhView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\QuyenCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\QuyenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_DichVuKhachHangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_DichVuKhachHangView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_GiamTaiSanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_GiamTaiSanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_GiaNhaCCCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_GiaNhaCCView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_HoaDonBanChiTietLogCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_HoaDonBanChiTietLogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhachTraNoHoaDonCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhachTraNoHoaDonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhauHaoTaiSanChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhauHaoTaiSanChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhauHaoTaiSanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhauHaoTaiSanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhuyenMaiHoaDonCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_KhuyenMaiHoaDonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_NhomTaiSanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_NhomTaiSanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_PhieuThuChiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_PhieuThuChiView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TaiSanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TaiSanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TangTaiSanCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TangTaiSanView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TinhTrangDoiTacCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TinhTrangDoiTacView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TinhTrangHangHoaCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SRM_TinhTrangHangHoaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\tb_ChiTietChiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\test_v20CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\test_V20_1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\thang_v1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TheKhoCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TheKhoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TheVIPChiTietCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TheVIPChiTietView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TheVIPCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TheVIPView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ThongTinNHCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ThongTinNHView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TienTeCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TienTeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TongChi_1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TongChi_2CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TongGiaTri_PhieuXuatCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TongHangNhapCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TongHangXuatCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewMainCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_1CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_2CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_4CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_5CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_6CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_byGDCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\view_doanhthutheogdCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\View_lydoChiCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Xuat_HangCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Xuat_TKCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Common\CommonResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Data\QuanAnModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanAnModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Data\QuanAnModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanAnModel.edmx</DependentUpon>
+      <LastGenOutput>QuanAnModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\QuanAnModel.edmx.diagram">
+      <DependentUpon>QuanAnModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\QuanAnModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanAnModel.edmx</DependentUpon>
+      <LastGenOutput>QuanAnModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

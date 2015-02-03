@@ -1,0 +1,139 @@
+<UserControl x:Class="QuanAn.Views.DoiTacView"
+xmlns="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+xmlns:viewmodel="clr-namespace:QuanAn.ViewModels"
+xmlns:system="clr-namespace:System;assembly=mscorlib"
+
+mc:Ignorable="d"
+d:DesignHeight="400" d:DesignWidth="600"
+DataContext="{dxmvvm:ViewModelSource viewmodel:DoiTacViewModel}">
+    <dxmvvm:Interaction.Behaviors>
+        <dx:DXMessageBoxService/>
+    </dxmvvm:Interaction.Behaviors>
+
+    <Grid>
+        <dxb:BarManager>
+            <DockPanel>
+                <dxr:RibbonControl RibbonStyle="Office2010" DockPanel.Dock="Top">
+                    <dxr:RibbonDefaultPageCategory Caption="defaultCategory">
+                        <dxr:RibbonPage Caption="Home">
+                            <dxr:RibbonPageGroup Caption="Doi Tac Tasks">
+                                <dxb:BarButtonItem Content="Save" Command="{Binding SaveCommand}" LargeGlyph="{dx:DXImage Image=Save_32x32.png}" Glyph="{dx:DXImage Image=Save_16x16.png}"/>
+                                <dxb:BarButtonItem Content="Delete" Command="{Binding DeleteCommand}" LargeGlyph="{dx:DXImage Image=Delete_32x32.png}" Glyph="{dx:DXImage Image=Delete_16x16.png}"/>
+                                <dxb:BarButtonItem Content="Close" Command="{Binding CloseCommand}" LargeGlyph="{dx:DXImage Image=Close_32x32.png}" Glyph="{dx:DXImage Image=Close_16x16.png}"/>
+                            </dxr:RibbonPageGroup>
+                        </dxr:RibbonPage>
+                    </dxr:RibbonDefaultPageCategory>
+                </dxr:RibbonControl>
+                <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom"/>
+                <Grid>
+                    <dxlc:LayoutControl Orientation="Vertical">
+                        <dxmvvm:Interaction.Behaviors>
+                            <dxmvvm:EventToCommand Event="{x:Static Binding.SourceUpdatedEvent}" Command="{Binding UpdateCommand}" />
+                        </dxmvvm:Interaction.Behaviors>
+                        <dxlc:LayoutItem Label="ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.ID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ma Doi Tac" >
+                            <dxe:TextEdit EditValue="{Binding Entity.MaDoiTac, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ten Doi Tac" >
+                            <dxe:TextEdit EditValue="{Binding Entity.TenDoiTac, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ten Nguoi Dai Dien" >
+                            <dxe:TextEdit EditValue="{Binding Entity.TenNguoiDaiDien, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Address" >
+                            <dxe:TextEdit EditValue="{Binding Entity.Address, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Dien Thoai1" >
+                            <dxe:TextEdit EditValue="{Binding Entity.DienThoai1, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Fax" >
+                            <dxe:TextEdit EditValue="{Binding Entity.Fax, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Thu Dien Tu" >
+                            <dxe:TextEdit EditValue="{Binding Entity.ThuDienTu, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ma So Thue" >
+                            <dxe:TextEdit EditValue="{Binding Entity.MaSoThue, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="DT331" >
+                            <dxe:TextEdit EditValue="{Binding Entity.DT331, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="DT131" >
+                            <dxe:TextEdit EditValue="{Binding Entity.DT131, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ton331" >
+                            <dxe:TextEdit EditValue="{Binding Entity.Ton331, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ton131" >
+                            <dxe:TextEdit EditValue="{Binding Entity.Ton131, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Cong No" >
+                            <dxe:CheckEdit EditValue="{Binding Entity.CongNo, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" IsThreeState="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Dien Thoai2" >
+                            <dxe:TextEdit EditValue="{Binding Entity.DienThoai2, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Nhom Doi Tac ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.NhomDoiTacID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Kieu Doi Tac ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.KieuDoiTacID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Cpy ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.CpyID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Gioi Han No" >
+                            <dxe:TextEdit EditValue="{Binding Entity.GioiHanNo, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ngan Hang" >
+                            <dxe:TextEdit EditValue="{Binding Entity.NganHang, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ngay Sinh" >
+                            <dxe:DateEdit EditValue="{Binding Entity.NgaySinh, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Is Ca Nhan" >
+                            <dxe:CheckEdit EditValue="{Binding Entity.IsCaNhan, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" IsThreeState="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Parent ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.ParentID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Ghi Chu" >
+                            <dxe:TextEdit EditValue="{Binding Entity.GhiChu, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Nhan Vien ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.NhanVienID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Tong So Tien Hien Tai" >
+                            <dxe:TextEdit EditValue="{Binding Entity.TongSoTienHienTai, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Tong So Tien" >
+                            <dxe:TextEdit EditValue="{Binding Entity.TongSoTien, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" HorizontalContentAlignment="Right" EditValueType="system:Decimal" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Tinh Trang ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.TinhTrangID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Nhan Vien Cham Soc ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.NhanVienChamSocID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="Nguon Khach ID" >
+                            <dxe:TextEdit EditValue="{Binding Entity.NguonKhachID, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnSourceUpdated=True}" MaskType="Numeric" Mask="d" MaskUseAsDisplayFormat="True" HorizontalContentAlignment="Right" EditValueType="system:Int32" AllowNullInput="True" />
+                        </dxlc:LayoutItem>
+
+                    </dxlc:LayoutControl>
+                </Grid>
+            </DockPanel>
+        </dxb:BarManager>
+    </Grid>
+</UserControl>
