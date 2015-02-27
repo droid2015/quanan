@@ -13,8 +13,7 @@ xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
 xmlns:viewmodel="clr-namespace:QuanAn.ViewModels"
 
 mc:Ignorable="d"
-        d:DesignHeight="400" d:DesignWidth="600"
- DataContext="{dxmvvm:ViewModelSource viewmodel:HoaDonBanChiTietCollectionViewModel}"
+ DataContext="{dxmvvm:ViewModelSource viewmodel:HoaDonBanChiTietCollectionViewModel}" Height="629.586" Width="668.639"
       
 >
 

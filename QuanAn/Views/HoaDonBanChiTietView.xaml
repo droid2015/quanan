@@ -14,7 +14,7 @@ xmlns:viewmodel="clr-namespace:QuanAn.ViewModels"
 xmlns:system="clr-namespace:System;assembly=mscorlib"
 
 mc:Ignorable="d"
-d:DesignHeight="400" d:DesignWidth="600"
+d:DesignHeight="953.731" d:DesignWidth="794.03"
 DataContext="{dxmvvm:ViewModelSource viewmodel:HoaDonBanChiTietViewModel}">
     <dxmvvm:Interaction.Behaviors>
         <dx:DXMessageBoxService/>
@@ -34,7 +34,7 @@ DataContext="{dxmvvm:ViewModelSource viewmodel:HoaDonBanChiTietViewModel}">
                         </dxr:RibbonPage>
                     </dxr:RibbonDefaultPageCategory>
                 </dxr:RibbonControl>
-                <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom"/>
+                <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom" Height="0" Margin="0,0,37,0"/>
                 <Grid>
                     <dxlc:LayoutControl Orientation="Vertical">
                         <dxmvvm:Interaction.Behaviors>
